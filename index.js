@@ -5,7 +5,9 @@ app.get('/', (req, res) => {
     res.send('Welcome to the homepage');
 });
 
-app.listen(3000, () => {
+const port = process.env.port || 3000;
 
-    console.log('WEbserver started');
+app.listen(port, () => {
+
+    console.log('Webserver started');
 });
